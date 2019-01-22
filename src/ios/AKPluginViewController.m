@@ -28,6 +28,15 @@
   dispatch_async(dispatch_get_main_queue(), ^{
     UIViewController<AKFViewController> *vc = [_accountKit viewControllerForPhoneLoginWithPhoneNumber:preFillPhoneNumber
                                                                                                 state:inputState];
+    
+    vc.uiManager.theme.statusBarStyle = [[UIApplication sharedApplication] statusBarStyle];;
+    vc.uiManager.theme.inputBackgroundColor = [UIColor colorWithRed:250.0f/255.0f green: 234.0f/255.0f blue:235.0f/255.0f alpha:1];
+    vc.uiManager.theme.buttonDisabledBackgroundColor = [UIColor colorWithRed:250.0f/255.0f green: 234.0f/255.0f blue:235.0f/255.0f alpha:1];
+    vc.uiManager.theme.buttonTextColor = [UIColor colorWithRed:250.0f/255.0f green: 250.0f/255.0f blue:250.0f/255.0f alpha:1];
+    vc.uiManager.theme.buttonBackgroundColor = [UIColor colorWithRed:219.0f/255.0f green: 90.0f/255.0f blue:101.0f/255.0f alpha:1];
+    vc.uiManager.theme.buttonBorderColor = [UIColor colorWithRed:219.0f/255.0f green: 90.0f/255.0f blue:101.0f/255.0f alpha:1];
+    vc.uiManager.theme.buttonDisabledTextColor = [UIColor colorWithRed:0.0f/255.0f green: 0.0f/255.0f blue:0.0f/255.0f alpha:1];
+    
     vc.enableSendToFacebook = facebookNotificationsEnabled;
     vc.defaultCountryCode = defaultCountryCode;
     [self _prepareLoginViewController:vc];
