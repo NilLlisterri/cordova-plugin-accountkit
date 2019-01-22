@@ -77,7 +77,7 @@
             <meta-data android:name="com.facebook.accountkit.ClientToken" android:value="@string/accountkit_token" />
             <meta-data android:name="com.facebook.accountkit.FacebookAppEventsEnabled" android:value="false"/>
 
-            <activity android:name="com.facebook.accountkit.ui.AccountKitActivity">
+            <activity android:name="com.facebook.accountkit.ui.AccountKitActivity" android:theme="@style/DinAccountKitTheme" xmlns:tools="http://schemas.android.com/tools" tools:replace="android:theme">
                 <intent-filter>
                     <action android:name="android.intent.action.VIEW" />
                     <category android:name="android.intent.category.DEFAULT" />
